@@ -1,0 +1,632 @@
+\documentclass[12pt]{report}
+\usepackage{fancyhdr, graphicx}
+\newdimen\dummy
+\dummy=\oddsidemargin
+\setlength{\oddsidemargin}{-0.5in}
+\setlength{\hoffset}{0.8in}
+\setlength{\textwidth}{6.1in}
+\setlength{\topmargin}{0.6in}
+\setlength{\voffset}{-1.3in} %this change the position of my name
+\setlength{\textheight}{9.2in}
+
+%\renewcommand{\headrulewidth}{0pt}
+%\fancyhead[L]{Yun Zhang PhD, Dow HSR, U of M}
+%\fancyhead[R]{\includegraphics[width=0.58cm]{C:/Dropbox/K/imrt/finalAnalysisTex/UMHS_Logo.JPG}}
+%%\fancyfoot[L]{Yun Zhang PhD, Dow HSR}
+%\fancyfoot[R]{}
+
+\pagestyle{fancy}
+\headheight 0.5in
+\headsep 0.3in
+
+%\title{\flushleft{IMRT Project Analysis Results}}
+\title{Overtreatment Project Analysis Results}
+\renewcommand{\footrulewidth}{0.1pt}
+%\date{Aug 25, 2011}
+\date{}
+\begin{document}
+\maketitle
+\thispagestyle{fancy}
+
+%\author{Yun Zhang}
+\section*{note}
+This file contains....
+
+\section{by 10 year life expectancy}
+\subsection{ low 10 year Surv}
+%xtable(low10yrSurv.res$predProb, digits=4)
+% latex table generated in R 2.15.0 by xtable 1.7-0 package
+% Wed Sep 12 11:29:43 2012
+\begin{table}[ht]
+\begin{center}
+\begin{tabular}{rrrrr}
+  \hline
+ & 2004 & 2005 & 2006 & 2007 \\ 
+  \hline
+observation & 0.5121 & 0.4764 & 0.4490 & 0.4153 \\ 
+  hasimrtnosrg & 0.4646 & 0.4979 & 0.5207 & 0.5494 \\ 
+  hasrobotnoradia & 0.0232 & 0.0256 & 0.0302 & 0.0353 \\ 
+   \hline
+\end{tabular}
+\end{center}
+\end{table}
+
+\subsection{mid 10 year survival}
+% xtable(mid10yrSurv.res$predProb, digits=4)
+% latex table generated in R 2.15.0 by xtable 1.7-0 package
+% Wed Sep 12 11:29:43 2012
+\begin{table}[ht]
+\begin{center}
+\begin{tabular}{rrrrr}
+  \hline
+ & 2004 & 2005 & 2006 & 2007 \\ 
+  \hline
+observation & 0.3892 & 0.3405 & 0.3178 & 0.2902 \\ 
+  hasimrtnosrg & 0.5484 & 0.5760 & 0.5678 & 0.5708 \\ 
+  hasrobotnoradia & 0.0624 & 0.0835 & 0.1144 & 0.1390 \\ 
+   \hline
+\end{tabular}
+\end{center}
+\end{table}
+\subsection{high 10 year survial}
+%> xtable(high10yrSurv.res$predProb, digits=4)
+% latex table generated in R 2.15.0 by xtable 1.7-0 package
+% Wed Sep 12 11:29:43 2012
+\begin{table}[ht]
+\begin{center}
+\begin{tabular}{rrrrr}
+  \hline
+ & 2004 & 2005 & 2006 & 2007 \\ 
+  \hline
+observation & 0.3450 & 0.2927 & 0.2856 & 0.2661 \\ 
+  hasimrtnosrg & 0.5134 & 0.5176 & 0.4961 & 0.4689 \\ 
+  hasrobotnoradia & 0.1416 & 0.1897 & 0.2183 & 0.2650 \\ 
+   \hline
+\end{tabular}
+\end{center}
+\end{table}
+\pagebreak
+
+
+\section{Sensitivity Analysis (t2nos): by 10 year life expectancy}
+\subsection{low 10 year survival}
+% latex table generated in R 2.15.0 by xtable 1.7-0 package
+% Wed Sep 12 10:58:43 2012
+\begin{table}[ht]
+\begin{center}
+\begin{tabular}{rrrrr}
+  \hline
+ & 2004 & 2005 & 2006 & 2007 \\ 
+  \hline
+observation & 0.4811 & 0.4413 & 0.4109 & 0.3819 \\ 
+  hasimrtnosrg & 0.4983 & 0.5343 & 0.5575 & 0.5838 \\ 
+  hasrobotnoradia & 0.0206 & 0.0243 & 0.0316 & 0.0343 \\ 
+   \hline
+\end{tabular}
+\end{center}
+\end{table}
+\subsection{mid 10 year survival}
+% latex table generated in R 2.15.0 by xtable 1.7-0 package
+% Wed Sep 12 10:58:43 2012
+\begin{table}[ht]
+\begin{center}
+\begin{tabular}{rrrrr}
+  \hline
+ & 2004 & 2005 & 2006 & 2007 \\ 
+  \hline
+observation & 0.3642 & 0.3127 & 0.2968 & 0.2719 \\ 
+  hasimrtnosrg & 0.5765 & 0.6035 & 0.5932 & 0.5959 \\ 
+  hasrobotnoradia & 0.0594 & 0.0839 & 0.1101 & 0.1322 \\ 
+   \hline
+\end{tabular}
+\end{center}
+\end{table}
+\subsection{high 10 year survival}
+% latex table generated in R 2.15.0 by xtable 1.7-0 package
+% Wed Sep 12 10:58:43 2012
+\begin{table}[ht]
+\begin{center}
+\begin{tabular}{rrrrr}
+  \hline
+ & 2004 & 2005 & 2006 & 2007 \\ 
+  \hline
+observation & 0.3322 & 0.2804 & 0.2683 & 0.2557 \\ 
+  hasimrtnosrg & 0.5346 & 0.5315 & 0.5165 & 0.4834 \\ 
+  hasrobotnoradia & 0.1333 & 0.1881 & 0.2151 & 0.2610 \\ 
+   \hline
+\end{tabular}
+\end{center}
+\end{table}
+
+%sweave.yz('C:/Dropbox/K/imrt/finalAnalysisTex/finalModelling_cox.Rnw')
+%tex2pdfopentex.yz('C:/Dropbox/K/imrt/finalAnalysisTex/finalModelling_cox.tex')
+
+\pagebreak
+\section{by Damico Risk}
+%> xtable(lowDamicoRisk.res$predProb, digits=4)
+\subsection{low damico}
+% latex table generated in R 2.15.0 by xtable 1.7-0 package
+% Wed Sep 12 11:33:04 2012
+\begin{table}[ht]
+\begin{center}
+\begin{tabular}{rrrrr}
+  \hline
+ & 2004 & 2005 & 2006 & 2007 \\ 
+  \hline
+observation & 0.5664 & 0.5291 & 0.5220 & 0.4979 \\ 
+  hasimrtnosrg & 0.3663 & 0.3904 & 0.3904 & 0.3924 \\ 
+  hasrobotnoradia & 0.0674 & 0.0804 & 0.0876 & 0.1097 \\ 
+   \hline
+\end{tabular}
+\end{center}
+\end{table}
+\subsection{mid damico}
+%> xtable(midDamicoRisk.res$predProb, digits=4)
+% latex table generated in R 2.15.0 by xtable 1.7-0 package
+% Wed Sep 12 11:33:04 2012
+\begin{table}[ht]
+\begin{center}
+\begin{tabular}{rrrrr}
+  \hline
+ & 2004 & 2005 & 2006 & 2007 \\ 
+  \hline
+observation & 0.3476 & 0.3005 & 0.2816 & 0.2517 \\ 
+  hasimrtnosrg & 0.5523 & 0.5632 & 0.5538 & 0.5435 \\ 
+  hasrobotnoradia & 0.1001 & 0.1364 & 0.1647 & 0.2049 \\ 
+   \hline
+\end{tabular}
+\end{center}
+\end{table}
+\subsection{high damico}
+%> xtable(highDamicoRisk.res$predProb, digits=4)
+% latex table generated in R 2.15.0 by xtable 1.7-0 package
+% Wed Sep 12 11:33:05 2012
+\begin{table}[ht]
+\begin{center}
+\begin{tabular}{rrrrr}
+  \hline
+ & 2004 & 2005 & 2006 & 2007 \\ 
+  \hline
+observation & 0.3146 & 0.2644 & 0.2295 & 0.2012 \\ 
+  hasimrtnosrg & 0.6312 & 0.6601 & 0.6657 & 0.6822 \\ 
+  hasrobotnoradia & 0.0542 & 0.0755 & 0.1049 & 0.1166 \\ 
+   \hline
+\end{tabular}
+\end{center}
+\end{table}
+
+\pagebreak
+\section{Sensitivity Analysis (t2nos):  by Damico risk}
+\subsection{low Damico Risk}
+% latex table generated in R 2.15.0 by xtable 1.7-0 package
+% Wed Sep 12 11:03:37 2012
+\begin{table}[ht]
+\begin{center}
+\begin{tabular}{rrrrr}
+  \hline
+ & 2004 & 2005 & 2006 & 2007 \\ 
+  \hline
+observation & 0.5373 & 0.5028 & 0.4908 & 0.4731 \\ 
+  hasimrtnosrg & 0.3975 & 0.4135 & 0.4213 & 0.4184 \\ 
+  hasrobotnoradia & 0.0652 & 0.0838 & 0.0879 & 0.1085 \\ 
+   \hline
+\end{tabular}
+\end{center}
+\end{table}
+\subsection{mid Damico Risk}
+% latex table generated in R 2.15.0 by xtable 1.7-0 package
+% Wed Sep 12 11:03:37 2012
+\begin{table}[ht]
+\begin{center}
+\begin{tabular}{rrrrr}
+  \hline
+ & 2004 & 2005 & 2006 & 2007 \\ 
+  \hline
+observation & 0.3274 & 0.2664 & 0.2580 & 0.2330 \\ 
+  hasimrtnosrg & 0.5746 & 0.5953 & 0.5788 & 0.5634 \\ 
+  hasrobotnoradia & 0.0980 & 0.1383 & 0.1632 & 0.2036 \\ 
+   \hline
+\end{tabular}
+\end{center}
+\end{table}
+
+\subsection{high Damico Risk}
+% latex table generated in R 2.15.0 by xtable 1.7-0 package
+% Wed Sep 12 11:03:37 2012
+\begin{table}[ht]
+\begin{center}
+\begin{tabular}{rrrrr}
+  \hline
+ & 2004 & 2005 & 2006 & 2007 \\ 
+  \hline
+observation & 0.2975 & 0.2537 & 0.2126 & 0.1889 \\ 
+  hasimrtnosrg & 0.6495 & 0.6691 & 0.6784 & 0.6896 \\ 
+  hasrobotnoradia & 0.0530 & 0.0772 & 0.1090 & 0.1214 \\ 
+   \hline
+\end{tabular}
+\end{center}
+\end{table}
+
+\pagebreak
+\section{surv and damico combination}
+\subsection{low surv low damico}
+%> xtable(lowSurvLowDamico.res$predProb,digits=4)
+% latex table generated in R 2.15.0 by xtable 1.7-0 package
+% Wed Sep 12 11:35:30 2012
+\begin{table}[ht]
+\begin{center}
+\begin{tabular}{rrrrr}
+  \hline
+ & 2004 & 2005 & 2006 & 2007 \\ 
+  \hline
+observation & 0.7285 & 0.6819 & 0.6594 & 0.6400 \\ 
+  hasimrtnosrg & 0.2594 & 0.2981 & 0.3285 & 0.3322 \\ 
+  hasrobotnoradia & 0.0120 & 0.0200 & 0.0122 & 0.0278 \\ 
+   \hline
+\end{tabular}
+\end{center}
+\end{table}
+\subsection{low surv mid damico}
+%> xtable(lowSurvMidDamico.res$predProb,digits=4)
+% latex table generated in R 2.15.0 by xtable 1.7-0 package
+% Wed Sep 12 11:35:30 2012
+\begin{table}[ht]
+\begin{center}
+\begin{tabular}{rrrrr}
+  \hline
+ & 2004 & 2005 & 2006 & 2007 \\ 
+  \hline
+observation & 0.4391 & 0.4126 & 0.3938 & 0.3576 \\ 
+  hasimrtnosrg & 0.5226 & 0.5551 & 0.5583 & 0.5873 \\ 
+  hasrobotnoradia & 0.0383 & 0.0322 & 0.0479 & 0.0552 \\ 
+   \hline
+\end{tabular}
+\end{center}
+\end{table}
+\subsection{low surv, high damico}
+%> xtable(lowSurvHighDamico.res$predProb,digits=4)
+% latex table generated in R 2.15.0 by xtable 1.7-0 package
+% Wed Sep 12 11:35:30 2012
+\begin{table}[ht]
+\begin{center}
+\begin{tabular}{rrrrr}
+  \hline
+ & 2004 & 2005 & 2006 & 2007 \\ 
+  \hline
+observation & 0.3625 & 0.3272 & 0.2850 & 0.2396 \\ 
+  hasimrtnosrg & 0.6197 & 0.6494 & 0.6833 & 0.7380 \\ 
+  hasrobotnoradia & 0.0178 & 0.0235 & 0.0317 & 0.0224 \\ 
+   \hline
+\end{tabular}
+\end{center}
+\end{table}
+\pagebreak
+\subsection{mid surv, low damico}
+%> xtable(midSurvLowDamico.res$predProb,digits=4)
+% latex table generated in R 2.15.0 by xtable 1.7-0 package
+% Wed Sep 12 11:35:30 2012
+\begin{table}[ht]
+\begin{center}
+\begin{tabular}{rrrrr}
+  \hline
+ & 2004 & 2005 & 2006 & 2007 \\ 
+  \hline
+observation & 0.5365 & 0.5105 & 0.4834 & 0.4692 \\ 
+  hasimrtnosrg & 0.4113 & 0.4382 & 0.4339 & 0.4325 \\ 
+  hasrobotnoradia & 0.0522 & 0.0513 & 0.0827 & 0.0983 \\ 
+   \hline
+\end{tabular}
+\end{center}
+\end{table}
+\subsection{mid surv and mid damico}
+%> xtable(midSurvMidDamico.res$predProb,digits=4)
+% latex table generated in R 2.15.0 by xtable 1.7-0 package
+% Wed Sep 12 11:35:30 2012
+\begin{table}[ht]
+\begin{center}
+\begin{tabular}{rrrrr}
+  \hline
+ & 2004 & 2005 & 2006 & 2007 \\ 
+  \hline
+observation & 0.3101 & 0.2644 & 0.2368 & 0.2055 \\ 
+  hasimrtnosrg & 0.6055 & 0.6118 & 0.6006 & 0.5921 \\ 
+  hasrobotnoradia & 0.0844 & 0.1238 & 0.1626 & 0.2024 \\ 
+   \hline
+\end{tabular}
+\end{center}
+\end{table}
+\subsection{mid surv, high damico}
+%> xtable(midSurvHighDamico.res$predProb,digits=4)
+% latex table generated in R 2.15.0 by xtable 1.7-0 package
+% Wed Sep 12 11:35:30 2012
+\begin{table}[ht]
+\begin{center}
+\begin{tabular}{rrrrr}
+  \hline
+ & 2004 & 2005 & 2006 & 2007 \\ 
+  \hline
+observation & 0.2939 & 0.2195 & 0.2175 & 0.1691 \\ 
+  hasimrtnosrg & 0.6610 & 0.7107 & 0.6920 & 0.7235 \\ 
+  hasrobotnoradia & 0.0451 & 0.0699 & 0.0905 & 0.1074 \\ 
+   \hline
+\end{tabular}
+\end{center}
+\end{table}
+\pagebreak
+\subsection{high surv, low damico}
+%> xtable(highSurvLowDamico.res$predProb,digits=4)
+% latex table generated in R 2.15.0 by xtable 1.7-0 package
+% Wed Sep 12 11:35:30 2012
+\begin{table}[ht]
+\begin{center}
+\begin{tabular}{rrrrr}
+  \hline
+ & 2004 & 2005 & 2006 & 2007 \\ 
+  \hline
+observation & 0.4441 & 0.4029 & 0.4295 & 0.3951 \\ 
+  hasimrtnosrg & 0.4237 & 0.4313 & 0.4058 & 0.4065 \\ 
+  hasrobotnoradia & 0.1322 & 0.1658 & 0.1647 & 0.1984 \\ 
+   \hline
+\end{tabular}
+\end{center}
+\end{table}
+\subsection{high surv, mid damico}
+%> xtable(highSurvMidDamico.res$predProb,digits=4)
+% latex table generated in R 2.15.0 by xtable 1.7-0 package
+% Wed Sep 12 11:35:30 2012
+\begin{table}[ht]
+\begin{center}
+\begin{tabular}{rrrrr}
+  \hline
+ & 2004 & 2005 & 2006 & 2007 \\ 
+  \hline
+observation & 0.2988 & 0.2218 & 0.2231 & 0.1937 \\ 
+  hasimrtnosrg & 0.5290 & 0.5263 & 0.4974 & 0.4533 \\ 
+  hasrobotnoradia & 0.1722 & 0.2519 & 0.2794 & 0.3530 \\ 
+   \hline
+\end{tabular}
+\end{center}
+\end{table}
+\subsection{high surv, high damico}
+%> xtable(highSurvHighDamico.res$predProb,digits=4)
+% latex table generated in R 2.15.0 by xtable 1.7-0 package
+% Wed Sep 12 11:35:30 2012
+\begin{table}[ht]
+\begin{center}
+\begin{tabular}{rrrrr}
+  \hline
+ & 2004 & 2005 & 2006 & 2007 \\ 
+  \hline
+observation & 0.2708 & 0.2398 & 0.1769 & 0.1881 \\ 
+  hasimrtnosrg & 0.6191 & 0.6186 & 0.6154 & 0.5770 \\ 
+  hasrobotnoradia & 0.1101 & 0.1416 & 0.2077 & 0.2349 \\ 
+   \hline
+\end{tabular}
+\end{center}
+\end{table}
+
+\pagebreak
+\section{Sensitivity Analysis (t2nos): surv and damico combination}
+\subsection{low survival and low damico}
+% latex table generated in R 2.15.0 by xtable 1.7-0 package
+% Wed Sep 12 11:14:48 2012
+\begin{table}[ht]
+\begin{center}
+\begin{tabular}{rrrrr}
+  \hline
+ & 2004 & 2005 & 2006 & 2007 \\ 
+  \hline
+observation & 0.6951 & 0.6609 & 0.6376 & 0.6216 \\ 
+  hasimrtnosrg & 0.2937 & 0.3222 & 0.3500 & 0.3507 \\ 
+  hasrobotnoradia & 0.0112 & 0.0169 & 0.0124 & 0.0277 \\ 
+   \hline
+\end{tabular}
+\end{center}
+\end{table}
+
+\subsection{low survival, mid damico}
+
+% latex table generated in R 2.15.0 by xtable 1.7-0 package
+% Wed Sep 12 11:15:11 2012
+\begin{table}[ht]
+\begin{center}
+\begin{tabular}{rrrrr}
+  \hline
+ & 2004 & 2005 & 2006 & 2007 \\ 
+  \hline
+observation & 0.4136 & 0.3587 & 0.3511 & 0.3168 \\ 
+  hasimrtnosrg & 0.5465 & 0.6087 & 0.5998 & 0.6284 \\ 
+  hasrobotnoradia & 0.0398 & 0.0325 & 0.0491 & 0.0549 \\ 
+   \hline
+\end{tabular}
+\end{center}
+\end{table}
+
+\subsection{low survival and high damico}
+% latex table generated in R 2.15.0 by xtable 1.7-0 package
+% Wed Sep 12 11:15:28 2012
+\begin{table}[ht]
+\begin{center}
+\begin{tabular}{rrrrr}
+  \hline
+ & 2004 & 2005 & 2006 & 2007 \\ 
+  \hline
+observation & 0.3473 & 0.3089 & 0.2542 & 0.2164 \\ 
+  hasimrtnosrg & 0.6424 & 0.6689 & 0.7102 & 0.7611 \\ 
+  hasrobotnoradia & 0.0103 & 0.0222 & 0.0356 & 0.0225 \\ 
+   \hline
+\end{tabular}
+\end{center}
+\end{table}
+\pagebreak
+\subsection{mid survival, low damico}
+% latex table generated in R 2.15.0 by xtable 1.7-0 package
+% Wed Sep 12 11:16:03 2012
+\begin{table}[ht]
+\begin{center}
+\begin{tabular}{rrrrr}
+  \hline
+ & 2004 & 2005 & 2006 & 2007 \\ 
+  \hline
+observation & 0.5096 & 0.4693 & 0.4505 & 0.4396 \\ 
+  hasimrtnosrg & 0.4405 & 0.4784 & 0.4798 & 0.4625 \\ 
+  hasrobotnoradia & 0.0499 & 0.0523 & 0.0697 & 0.0979 \\ 
+   \hline
+\end{tabular}
+\end{center}
+\end{table}
+\subsection{mid survival, mid damico}
+% latex table generated in R 2.15.0 by xtable 1.7-0 package
+% Wed Sep 12 11:16:03 2012
+\begin{table}[ht]
+\begin{center}
+\begin{tabular}{rrrrr}
+  \hline
+ & 2004 & 2005 & 2006 & 2007 \\ 
+  \hline
+observation & 0.2934 & 0.2409 & 0.2271 & 0.2053 \\ 
+  hasimrtnosrg & 0.6283 & 0.6338 & 0.6153 & 0.6102 \\ 
+  hasrobotnoradia & 0.0782 & 0.1252 & 0.1576 & 0.1845 \\ 
+   \hline
+\end{tabular}
+\end{center}
+\end{table}
+\subsection{mid survival, high damico}
+% latex table generated in R 2.15.0 by xtable 1.7-0 package
+% Wed Sep 12 11:16:03 2012
+\begin{table}[ht]
+\begin{center}
+\begin{tabular}{rrrrr}
+  \hline
+ & 2004 & 2005 & 2006 & 2007 \\ 
+  \hline
+observation & 0.2679 & 0.2183 & 0.2140 & 0.1595 \\ 
+  hasimrtnosrg & 0.6848 & 0.7122 & 0.6903 & 0.7301 \\ 
+  hasrobotnoradia & 0.0473 & 0.0695 & 0.0957 & 0.1104 \\ 
+   \hline
+\end{tabular}
+\end{center}
+\end{table}
+\pagebreak
+\subsection{high survival, low damico}
+%> xtable(highSurvLowDamico.res$predProb,digits=4)
+% latex table generated in R 2.15.0 by xtable 1.7-0 package
+% Wed Sep 12 11:18:31 2012
+\begin{table}[ht]
+\begin{center}
+\begin{tabular}{rrrrr}
+  \hline
+ & 2004 & 2005 & 2006 & 2007 \\ 
+  \hline
+observation & 0.4313 & 0.3971 & 0.4042 & 0.3785 \\ 
+  hasimrtnosrg & 0.4459 & 0.4322 & 0.4272 & 0.4321 \\ 
+  hasrobotnoradia & 0.1228 & 0.1707 & 0.1686 & 0.1894 \\ 
+   \hline
+\end{tabular}
+\end{center}
+\end{table}
+
+
+\subsection{high survival, mid damico}
+%> xtable(highSurvMidDamico.res$predProb,digits=4)
+% latex table generated in R 2.15.0 by xtable 1.7-0 package
+% Wed Sep 12 11:18:31 2012
+\begin{table}[ht]
+\begin{center}
+\begin{tabular}{rrrrr}
+  \hline
+ & 2004 & 2005 & 2006 & 2007 \\ 
+  \hline
+observation & 0.2916 & 0.2040 & 0.2130 & 0.1853 \\ 
+  hasimrtnosrg & 0.5460 & 0.5521 & 0.5179 & 0.4637 \\ 
+  hasrobotnoradia & 0.1624 & 0.2438 & 0.2692 & 0.3510 \\ 
+   \hline
+\end{tabular}
+\end{center}
+\end{table}
+\subsection{high survival, high damico}
+%> xtable(highSurvHighDamico.res$predProb,digits=4)
+% latex table generated in R 2.15.0 by xtable 1.7-0 package
+% Wed Sep 12 11:18:31 2012
+\begin{table}[ht]
+\begin{center}
+\begin{tabular}{rrrrr}
+  \hline
+ & 2004 & 2005 & 2006 & 2007 \\ 
+  \hline
+observation & 0.2602 & 0.2298 & 0.1697 & 0.1883 \\ 
+  hasimrtnosrg & 0.6311 & 0.6276 & 0.6256 & 0.5730 \\ 
+  hasrobotnoradia & 0.1087 & 0.1426 & 0.2047 & 0.2386 \\ 
+   \hline
+\end{tabular}
+\end{center}
+\end{table}
+
+
+\section{table 2 odds ratio}
+%xtable(1/low10yrSurv.res$or[orRowNameVec,c('OR','95LB.OR','95UB.OR')], caption='low 10 yr survival')
+% latex table generated in R 2.15.0 by xtable 1.7-0 package
+% Wed Sep 19 17:09:59 2012
+\begin{table}[ht]
+\begin{center}
+\begin{tabular}{rrrr}
+  \hline
+ & OR & 95LB.OR & 95UB.OR \\ 
+  \hline
+hasimrtnosrg:.damicoriskdummy.low & 4.07 & 4.73 & 3.52 \\ 
+  hasrobotnoradia:.damicoriskdummy.low & 1.89 & 3.19 & 1.12 \\ 
+  hasimrtnosrg:.damicoriskdummy.mid & 1.88 & 2.10 & 1.68 \\ 
+  hasrobotnoradia:.damicoriskdummy.mid & 0.96 & 1.30 & 0.71 \\ 
+  hasimrtnosrg:grdCatdummy.wellmodDiff & 2.00 & 2.27 & 1.75 \\ 
+  hasrobotnoradia:grdCatdummy.wellmodDiff & 4.42 & 6.95 & 2.81 \\ 
+   \hline
+\end{tabular}
+\caption{low 10 yr survival}
+\end{center}
+\end{table}
+
+
+ 
+%> xtable(1/mid10yrSurv.res$or[orRowNameVec,c('OR','95LB.OR','95UB.OR')], caption='mid 10 yr survival')
+% latex table generated in R 2.15.0 by xtable 1.7-0 package
+% Thu Sep 20 11:11:10 2012
+\begin{table}[ht]
+\begin{center}
+\begin{tabular}{rrrr}
+  \hline
+ & OR & 95LB.OR & 95UB.OR \\ 
+  \hline
+hasimrtnosrg:.damicoriskdummy.low & 2.49 & 2.89 & 2.16 \\ 
+  hasrobotnoradia:.damicoriskdummy.low & 1.32 & 1.77 & 0.99 \\ 
+  hasimrtnosrg:.damicoriskdummy.mid & 1.35 & 1.53 & 1.20 \\ 
+  hasrobotnoradia:.damicoriskdummy.mid & 0.63 & 0.78 & 0.52 \\ 
+  hasimrtnosrg:grdCatdummy.wellmodDiff & 2.00 & 2.28 & 1.74 \\ 
+  hasrobotnoradia:grdCatdummy.wellmodDiff & 3.20 & 4.09 & 2.49 \\ 
+   \hline
+\end{tabular}
+\caption{mid 10 yr survival}
+\end{center}
+\end{table}
+%xtable(1/high10yrSurv.res$or[orRowNameVec,c('OR','95LB.OR','95UB.OR')], caption='high 10 yr survival')
+% latex table generated in R 2.15.0 by xtable 1.7-0 package
+% Wed Sep 19 17:09:59 2012
+\begin{table}[ht]
+\begin{center}
+\begin{tabular}{rrrr}
+  \hline
+ & OR & 95LB.OR & 95UB.OR \\ 
+  \hline
+hasimrtnosrg:.damicoriskdummy.low & 2.11 & 2.46 & 1.82 \\ 
+  hasrobotnoradia:.damicoriskdummy.low & 1.11 & 1.38 & 0.90 \\ 
+  hasimrtnosrg:.damicoriskdummy.mid & 1.31 & 1.49 & 1.15 \\ 
+  hasrobotnoradia:.damicoriskdummy.mid & 0.76 & 0.89 & 0.65 \\ 
+  hasimrtnosrg:grdCatdummy.wellmodDiff & 1.61 & 1.87 & 1.39 \\ 
+  hasrobotnoradia:grdCatdummy.wellmodDiff & 2.58 & 3.12 & 2.09 \\ 
+   \hline
+\end{tabular}
+\caption{high 10 yr survival}
+\end{center}
+\end{table}
+> 
+
+\end{document}
